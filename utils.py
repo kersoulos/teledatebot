@@ -18,7 +18,7 @@ import json
 import os
 from google.oauth2.service_account import Credentials
 
-creds_info = json.loads(os.environ["GGOOGLE_CREDENTIALS_JSON"])
+creds_info = json.loads(os.environ["GOOGLE_CREDENTIALS_JSON"])
 creds = Credentials.from_service_account_info(creds_info, scopes=SCOPES)
 sheets_service = build("sheets", "v4", credentials=creds)
 sheet = sheets_service.spreadsheets()
