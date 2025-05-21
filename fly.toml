@@ -1,0 +1,16 @@
+app = "teledatebot"  
+
+primary_region = "ams"  
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PYTHONUNBUFFERED = "1"  
+  TZ = "Europe/Moscow"    
+
+[deploy]
+  release_command = "python main.py"  
+
+[processes]
+  app = "python main.py" 
