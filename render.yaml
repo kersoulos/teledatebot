@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: telegram-giveaway-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your_telegram_token_here
+      - key: API_ID
+        value: your_api_id_here
+      - key: API_HASH
+        value: your_api_hash_here
+      - key: SPREADSHEET_ID
+        value: your_google_spreadsheet_id_here
+      - key: GOOGLE_CREDENTIALS_JSON
+        value: your_google_credentials_json_here
